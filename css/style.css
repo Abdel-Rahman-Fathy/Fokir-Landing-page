@@ -1,0 +1,340 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+:root {
+  --textColor: #ff305b;
+  --black: #333;
+  --light-color: #555555;
+  --bgColor:#f1f1f1;
+}
+section{
+  padding: 100px 0;
+}
+
+.title{
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+}
+.title::after{
+  content: "";
+  position: absolute;
+  border-color: var(--textColor);
+  border-width: 1px 0px;
+  border-style: solid;
+  width: 80px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+
+  
+}
+.title::before{
+  content: "";
+  position: absolute;
+  border-color: var(--textColor);
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  width: 150px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%,50%);
+  padding: 5px;
+}
+/* Start Header */
+.logo{
+  color: var(--textColor);
+  font-size: 1.5rem;
+  font-weight: 600;
+}  
+nav{
+  z-index: 10000;
+}
+.logo:hover{
+  color: var(--textColor);
+}
+.nav-link{
+  color: #fff;
+  padding: 0px 15px !important;
+
+}
+
+.nav-link:hover{
+  color: var(--textColor);
+}
+
+.nav-home{
+  color: var(--textColor);
+}
+/* End Header */
+
+/* Start Home */
+.home{
+  background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/slider/slider-01.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+.text p{
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.text h1{
+  color: var(--textColor);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+}
+.text h2{
+  color: #fff;
+  font-weight: 200;
+}
+.text h2::after{
+  content: " |";
+  animation-name: typing;
+
+  animation-duration:10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes typing {
+  0%{  content: " |";}
+  3%{  content: " D |";}
+  6%{  content: " De |";}
+  9%{  content: " Dev |";}
+  12%{  content: " Deve |";}
+  15%{  content: " Devel |";}
+  18%{  content: " Develo |";}
+  21%{  content: " Develop |";}
+  24%{  content: " Develope |";}
+  27%{  content: " Developer |";}
+  30%{  content: " Develope |";}
+  33%{  content: " Develop |";}
+  36%{  content: " Develo |";}
+  39%{  content: " Devel |";}
+  42%{  content: " Deve |";}
+  45%{  content: " Dev |";}
+  48%{  content: " De |";}
+  51%{  content: " D |";}
+  54%{  content: " |";}
+  57%{  content: " De |";}
+  60%{  content: " Des |";}
+  63%{  content: " Desi |";}
+  66%{  content: " Desig |";}
+  69%{  content: " Design |";}
+  72%{  content: " Desig |";}
+  75%{  content: " Desi |";}
+  78%{  content: " Des |";}
+  81%{  content: " De |";}
+  84%{  content: " D |";}
+  87%{  content: " |";}
+
+
+
+
+
+
+
+
+
+}
+/* End Home */
+
+/* Start about */
+.about .brdr{
+  border: 8px solid var(--light-color);
+  border-radius: 10px;
+}
+.about .image{
+  position: relative;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+.about .layer{
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  top: 100%;
+  border-radius: 10px;
+
+}
+.about .image:hover .layer{
+  top: 0px;
+}
+.about .hello{
+  position: relative;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 25px;
+  padding-left: 13px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.about .hello::before{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 22px;
+  background-color: var(--textColor);
+  left: 0;
+}
+
+.desc-about{
+  border-bottom: 1px dashed var(--black);
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  font-size: 1.1rem;
+  width: 95%;
+  line-height: 1.8rem;
+}
+.about ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.about li {
+  width: 50%;
+  margin-bottom: 10px;
+
+}
+.about span{
+  font-weight: 600;
+  color: var(--black);
+  font-size: 1.1rem;
+}
+.about a{
+  text-decoration: none;
+  color: var(--light-color);
+}
+/* End about */
+.services{
+  background-color: var(--bgColor);
+}
+.services h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.test:hover{
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 2px rgba(98, 93, 93 , .5);
+  transition: all .5s;
+
+}
+.services i{
+  color: var(--textColor);
+  font-size: 2rem;
+  padding: 30px 0px;
+  transition: all .5s;
+
+}
+.test:hover i{
+  transform: scale(1.2);
+
+}
+/* End about */
+
+/* Start Portofilio */
+.link-tab{
+  padding:30px 20px 0px 20px ;
+}
+.link-tab a{
+  color: var(--black) ;
+  text-decoration: none;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link ,.portfolio-menu button.active {
+  color: var(--textColor);
+  background-color: transparent !important;
+}
+/* End Portofilio */
+
+/* Start Feedback */
+.feedback{
+  background-color: var(--bgColor);
+}
+
+.feedback1{
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient( 320deg ,var(--bgColor) 70%, var(--textColor) );
+}
+.feedback2{
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient( 320deg ,var(--bgColor) 70%, var(--textColor));
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--textColor);
+  padding: 20px 10px;  
+
+}
+.carousel-indicators .one{
+  background-image: url(../img/testimonial/2.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.carousel-indicators .two{
+  background-image: url(../img/testimonial/3.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.image-carousel{
+  width: 100px;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+.feedback a , .feedback i {
+  color: var(--light-color);
+}
+.review-reating i{
+  color: var(--textColor);
+}
+/* End Feedback */
+
+/* Start Blog */
+
+.blog a {
+  text-decoration: none;
+  color: var(--black);
+  transition: all .5s;
+
+}
+.blog a:hover{
+  color: var(--textColor);
+}
+.blog h5{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card-body{
+  padding: 30px 20px;
+}
+
+/* End Blog */
+.contact{
+  background-color: var(--bgColor);
+}
+footer{
+  background-color: var(--black);
+  padding: 30px 0px;
+}
